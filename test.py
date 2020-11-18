@@ -80,10 +80,10 @@ st.text('manipulating large datasets, or performing expensive computations.')
 
 st.text('To use the cache, wrap functions with the @st.cache decorator:')
 
-@st.cache  # 👈 This function will be cached
-def my_slow_function(arg1, arg2):
-    # Do something really slow in here!
-    return the_output
+st.code('@st.cache')  # 👈 This function will be cached
+st.code('def my_slow_function(arg1, arg2):')
+st.code('Do something really slow in here!') 
+st.code('return the_output')
 
 #When you mark a function with the @st.cache decorator,
 # it tells Streamlit that whenever the function is called it needs to check a few things:
